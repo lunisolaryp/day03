@@ -9,7 +9,7 @@ for (let i = 0; i < arr.length ; i++) {
     console.log(`SUM: ${sum}`)
 }
 
-let avg = (sum / arr.length).toFixed(3)
+let avg = (sum / arr.length).toFixed(3) // 소수점 3째 자리까지 끊어줌
 console.log("AVG: " + avg)
 
 // 첫 데이터와 두번째 데이터 비교 → 첫번째 데이터를 기준으로 비교하는데 첫번째 데이터끼리 비교안하고 시작하는 방법1(bubble sort),
