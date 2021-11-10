@@ -1,5 +1,6 @@
 //2020년도 분기별 매출
-const arr = [
+const arr = [ // 정보 구조화하는 이유는 나중에 찾기 쉬우려고
+// but 자바는 안돼 type이 까다로우니까.. → 클래스가 나오게 돼. C언어에서는 구조체
     [90, 87, 140], //1,2,3월 매출
     [120, 130, 150], //4,5,6월 매출
     [180, 240, 200], //7,8,9월 매출
@@ -16,16 +17,16 @@ for (let i = 0; i < arr.length ; i++) { //arr[i]가 숫자가 아니라 배열�
 
     // 2-분기별 평균: tempArr[0]+tempArr[1]+tempArr[2] / temp.length
     let sum = 0
-    for (let j = 0; j < tempArr.length ; j++) {
-        sum += tempArr[j] // 분기 안에 있는 월별 합
-    }
-    // console.log(sum)
-    const tempAvg = (sum/tempArr.length).toFixed(2)
-    console.log(tempAvg)
-    //3-분기별 평균을 배열에 보관해야해 : 계속 유지되어야 하는 데이터 = 밖에 & 전체 보관해야 하는 데이터니 for루프 제일 밖에
-    //5-배열에 넣는 것 push
-    parr.push(parseFloat(tempAvg)) // 6-문자열을 소수로 변경해서 넣어주자
+for (let j = 0; j < tempArr.length ; j++) {
+    sum += tempArr[j] // 분기 안에 있는 월별 합
 }
+// console.log(sum)
+const tempAvg = (sum/tempArr.length).toFixed(2)
+console.log(tempAvg)
+//3-분기별 평균을 배열에 보관해야해 : 계속 유지되어야 하는 데이터 = 밖에 & 전체 보관해야 하는 데이터니 for루프 제일 밖에
+//5-배열에 넣는 것 push
+parr.push(parseFloat(tempAvg)) // 6-문자열을 소수로 변경해서 넣어주자
+}f
 console.log(parr) // 데이터는 숫자인데 문자열이 되었어 '123.11' why? .toFixed 때문에!
 
 //7-parr로 매출 평균이 가장 좋은 "분기"
@@ -39,7 +40,7 @@ for (let i = 0; i < parr.length ; i++) {
     }
 }
 console.log(`MAX: ${max}`)
-console.log(`PERIOD: ${period+1}분기입니다.`)
+console.log(`PERIOD: ${period+1}분기입니다.`) //7.3-분기는 1로 시작하니까, index는 0으로 시작하니 +1
 
 //최고 매출 월
 
