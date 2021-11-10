@@ -41,10 +41,6 @@ for (let i = 0; i < parr.length ; i++) {
 console.log(`MAX: ${max}`)
 console.log(`PERIOD: ${period+1}분기입니다.`)
 
-
-
-
-
 //최고 매출 월
 
 //최저 매출 분기와 최고 매출 분기 차
